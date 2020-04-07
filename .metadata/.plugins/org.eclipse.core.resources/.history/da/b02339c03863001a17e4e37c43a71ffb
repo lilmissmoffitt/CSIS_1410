@@ -1,0 +1,14 @@
+package guiImagePanel.Images;
+
+import javax.swing.JPanel;
+
+public class MainJPanel extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public MainJPanel() {
+
+	}
+
+}

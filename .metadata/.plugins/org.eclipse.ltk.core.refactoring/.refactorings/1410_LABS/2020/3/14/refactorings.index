@@ -1,0 +1,5 @@
+1585528450217	Extract method 'printNumbers'
+1585535362485	Extract method 'printCouches'
+1585535501068	Extract method 'countCouches'
+1585535562898	Extract method 'checkFavorites'
+1585609407639	Extract method 'addFavorites'

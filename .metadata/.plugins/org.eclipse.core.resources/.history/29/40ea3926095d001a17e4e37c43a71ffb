@@ -1,0 +1,104 @@
+package guiLayout;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Dimension;
+
+public class LabGuiLayout extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					LabGuiLayout frame = new LabGuiLayout();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public LabGuiLayout() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 200);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(new BorderLayout());
+		
+		JLabel lblTitle = title();
+		contentPane.add(lblTitle, BorderLayout.NORTH);
+		
+		JPanel controlPanel = controlPanel();
+		contentPane.add(controlPanel);
+	}
+
+	private JPanel controlPanel() {
+		JPanel mainPanel = new JPanel();
+		mainPanel.setLayout(new GridLayout(1, 0, 0, 0));
+		{
+			JPanel controlPanel = new JPanel();
+			mainPanel.add(controlPanel);
+			controlPanel.setLayout(new GridLayout(2, 0, 0, 0));
+			{
+				JButton btnMoveLeft = new JButton("<==");
+				btnMoveLeft.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+					}
+				});
+				controlPanel.add(btnMoveLeft);
+			}
+			{
+				JButton btnMoveRight = new JButton("==>");
+				btnMoveRight.setSize(new Dimension(5, 5));
+				controlPanel.add(btnMoveRight);
+			}
+		}
+		{
+			JButton btnNewButton_3 = new JButton("1");
+			mainPanel.add(btnNewButton_3);
+		}
+		{
+			JButton btnNewButton_1 = new JButton("2");
+			mainPanel.add(btnNewButton_1);
+		}
+		{
+			JButton btnNewButton = new JButton("3");
+			mainPanel.add(btnNewButton);
+		}
+		{
+			JButton btnNewButton_2 = new JButton("4");
+			mainPanel.add(btnNewButton_2);
+		}
+		return mainPanel;
+	}
+
+	private JLabel title() {
+		JLabel lblTitle = new JLabel("Demo Layout");
+		lblTitle.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTitle.setBorder(new EmptyBorder(5, 5, 5, 5));
+		return lblTitle;
+	}
+
+}

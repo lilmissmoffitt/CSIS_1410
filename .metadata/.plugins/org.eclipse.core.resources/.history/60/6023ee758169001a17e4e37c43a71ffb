@@ -1,0 +1,49 @@
+package wrapperClass;
+
+import java.util.Random;
+
+/**
+ * 
+ * @author melissamoffitt
+ *
+ */
+public class DemoWrapperClass {
+	
+	public static void main(String[] args) {
+		minMax();
+		System.out.printf("%n%d number", getRandomThreeDigitNumber());
+		
+	}
+	
+	/**
+	 * 
+	 * @return 
+	 * @return
+	 */
+	public static void minMax() {
+		System.out.printf("Byte   : [%d , %d] %n", Byte.MIN_VALUE, Byte.MAX_VALUE);
+		System.out.printf("Short  : [%d , %d] %n", Short.MIN_VALUE, Short.MAX_VALUE);
+		System.out.printf("Integer: [%d , %d] %n", Integer.MIN_VALUE, Integer.MAX_VALUE);
+		System.out.printf("Long   : [%d , %d] %n", Long.MIN_VALUE, Long.MAX_VALUE);
+		System.out.printf("Float  : [%f , %f] %n", Float.MIN_VALUE, Float.MAX_VALUE);
+		System.out.printf("Double : [%f , %f] ", Double.MIN_VALUE, Double.MAX_VALUE);
+	}
+	
+	
+	public static String numberRepresentations(String number) {
+		return Integer.toString(Integer.parseInt(number, 10), 16);
+		
+	}
+	
+	public static String charProperties(char ch) {
+		return "hello";
+	}
+	
+	public static int getRandomThreeDigitNumber() {
+		Random rand = new Random();
+		int randNum = rand.nextInt(899)+100;
+		return randNum;
+	}
+
+	
+}

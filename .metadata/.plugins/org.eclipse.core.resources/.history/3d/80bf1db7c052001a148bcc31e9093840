@@ -1,0 +1,52 @@
+package nuisance;
+
+public class Friend extends Person{
+	private Hobby hobby;
+	Friend[] friends;
+	
+	public Friend(String name, int age, Hobby hobby) {
+		super(name, age);
+		this.hobby = hobby;
+	}
+	
+	public String chill() {
+		return getName() + " is chilling";
+	}
+	
+	public String play(Friend[] friends) {
+		
+		switch(friends.length - 1) {
+		
+		case 1:
+			return "playing " + hobby + " with " +
+					friends[0].getName();
+		case 2:
+			return "playing " + hobby + " with "+
+					friends[0].getName() + " and " + friends[1].getName();
+		case 3: 
+			return "playing " + hobby + " with "+
+					friends[0].getName() + ", " + friends[1].getName() + ", and "+
+					friends[2].getName();
+		default:
+			return "playing " + hobby;
+		}
+	}
+	
+	public String toString() {
+		return getName() + "(" + getAge() + ") " + hobby; 
+	}
+	
+	public boolean equals(Friend f) {
+		boolean isEqual = false;
+		
+		if (f.equals(friends)) {
+			isEqual = true;
+		}
+		else {
+			isEqual = false;
+		}
+		return isEqual;
+	}
+	
+	
+}

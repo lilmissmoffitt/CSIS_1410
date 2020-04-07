@@ -1,0 +1,33 @@
+package labCollection;
+
+import java.awt.Color;
+
+public class Couch {
+
+	public Color color;
+	public Material material;
+	
+	public Couch(Color color, Material material){
+		material = this.material;
+		color = this.color;
+		
+	}
+
+	/**
+	 * @return the color
+	 */
+	public Color getColor() {
+		return color;
+	}
+
+	/**
+	 * @return the material
+	 */
+	public Material getMaterial() {
+		return material;
+	}
+
+	
+	
+	
+}

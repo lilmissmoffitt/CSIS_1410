@@ -1,0 +1,31 @@
+package m02;
+
+/**
+ * 
+ * @author melissamoffitt
+ *
+ */
+public class Cave extends Domicile{
+	
+	private boolean cavePainting;
+	
+	public Cave(int numberOfRooms, boolean cavePainting) {
+		super(numberOfRooms);
+		this.cavePainting = cavePainting;
+	}
+	
+	public boolean hasPainting() {
+		return true;
+	}
+	@Override
+	public String toString() {
+		String caveHasPainting = "";
+		if (hasPainting() == true) {
+			caveHasPainting = "*";
+		}
+		return return this.getClass().getSimpleName()
+				+ " with " + getNumberOfRooms() + " rooms " + 
+				caveHasPainting;
+	}
+
+}

@@ -1,0 +1,96 @@
+package module03;
+
+import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.EventQueue;
+import java.awt.Graphics;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import java.awt.Color;
+import javax.swing.JButton;
+
+
+/**
+ * 
+ * @author melissamoffitt
+ *
+ */
+@SuppressWarnings("serial")
+public class Module03Gui extends JFrame {
+	
+	int faceIndex = 0;
+	private ImageIcon[] faces = { new ImageIcon(Module03Gui.class.getResource("/module03/Images/RedSquare1.png")),
+			new ImageIcon(Module03Gui.class.getResource("/module03/Images/RedSquare2.png")),
+			new ImageIcon(Module03Gui.class.getResource("/module03/Images/RedSquare3.png")),
+			new ImageIcon(Module03Gui.class.getResource("/module03/Images/YellowSquare.png"))
+	};
+	private JLabel lblMain;
+	private JPanel contentPane;
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Module03Gui frame = new Module03Gui();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Module03Gui() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 400, 400);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
+		lblMain = createMainLabel();
+		contentPane.add(lblMain, BorderLayout.CENTER);
+		
+		JLabel lblWhichFace = createFaceLabel();
+		contentPane.add(lblWhichFace, BorderLayout.SOUTH);
+		
+		JButton btnLook = createBtnLook();
+		contentPane.add(btnLook, BorderLayout.EAST);
+	}
+
+	private JButton createBtnLook() {
+		JButton btnLook = new JButton("LOOK");
+		btnLook.setBorder(new EmptyBorder(0, 5, 0, 0));
+		return btnLook;
+	}
+
+	private JLabel createFaceLabel() {
+		JLabel lblWhichFace = new JLabel("Face");
+		lblWhichFace.setOpaque(true);
+		lblWhichFace.setBackground(new Color(180, 180, 180));
+		lblWhichFace.setBorder(new EmptyBorder(8, 0, 8, 0));
+		lblWhichFace.setForeground(new Color(50, 50, 50));
+		lblWhichFace.setFont(new Font("Times New Roman", Font.PLAIN, 18));
+		lblWhichFace.setHorizontalAlignment(SwingConstants.CENTER);
+		return lblWhichFace;
+	}
+
+	private JLabel createMainLabel() {
+		JLabel lblMain = new JLabel();
+		lblMain.setBorder(new EmptyBorder(10, 15, 10, 0));
+		lblMain.setIcon(faces[faceIndex]);
+		return lblMain;
+	}
+
+}

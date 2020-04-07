@@ -1,0 +1,6 @@
+package nuisance;
+
+public interface Nuisance {
+	//Possibly String?
+	String annoy();
+}

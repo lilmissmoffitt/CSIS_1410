@@ -1,0 +1,36 @@
+package wrapperClass;
+
+/**
+ * 
+ * @author melissamoffitt
+ *
+ */
+public class DemoWrapperClass {
+	
+	public static void main(String[] args) {
+		minMax();
+		numberRepresentations("9");
+	}
+	
+	/**
+	 * 
+	 * @return 
+	 * @return
+	 */
+	public static void minMax() {
+		System.out.printf("Byte   : [%d , %d] %n", Byte.MIN_VALUE, Byte.MAX_VALUE);
+		System.out.printf("Short  : [%d , %d] %n", Short.MIN_VALUE, Short.MAX_VALUE);
+		System.out.printf("Integer: [%d , %d] %n", Integer.MIN_VALUE, Integer.MAX_VALUE);
+		System.out.printf("Long   : [%d , %d] %n", Long.MIN_VALUE, Long.MAX_VALUE);
+		System.out.printf("Float  : [%f , %f] %n", Float.MIN_VALUE, Float.MAX_VALUE);
+		System.out.printf("Double : [%f , %f] ", Double.MIN_VALUE, Double.MAX_VALUE);
+	}
+	
+	
+	public static String numberRepresentations(String number) {
+		return Integer.toString(Integer.parseInt(number, 10), 16);
+		
+	}
+	
+
+}

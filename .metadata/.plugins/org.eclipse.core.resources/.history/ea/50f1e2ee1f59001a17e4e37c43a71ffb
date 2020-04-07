@@ -1,0 +1,70 @@
+package guiIntro;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
+public class LabGuiIntro extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					LabGuiIntro frame = new LabGuiIntro();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public LabGuiIntro() {
+		textField.setColumns(10);
+		JLabel lblTitle = newLblTitle();
+		contentPane.add(lblTitle, BorderLayout.NORTH);
+		
+		JButton btnWestButton = createWestButton();
+		contentPane.add(btnWestButton, BorderLayout.WEST);
+		
+		JPanel textPanel = newTextPanel();
+		contentPane.add(textPanel, BorderLayout.SOUTH);
+	}
+
+	private JPanel newTextPanel() {
+		JPanel textPanel = new JPanel();
+		return textPanel;
+	}
+
+	private JButton createWestButton() {
+		JButton btnWestButton = new JButton("WEST");
+		return btnWestButton;
+	}
+
+	private JLabel newLblTitle() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
+		JLabel lblTitle = new JLabel("New label");
+		return lblTitle;
+	}
+
+}

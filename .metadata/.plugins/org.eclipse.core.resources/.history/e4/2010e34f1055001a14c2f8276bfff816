@@ -1,0 +1,28 @@
+package m02;
+
+/**
+ * 
+ * @author melissamoffitt
+ *
+ */
+public class Domicile {
+	private int numberOfRooms;
+	
+	public Domicile(int numberOfRooms) {
+		this.numberOfRooms = numberOfRooms;
+	}
+	
+	public int getNumberOfRooms() {
+		return numberOfRooms;
+	}
+	
+	public void heat() {
+		
+	}
+	
+	public String toString() {
+		
+		return "Return here";
+	}
+
+}

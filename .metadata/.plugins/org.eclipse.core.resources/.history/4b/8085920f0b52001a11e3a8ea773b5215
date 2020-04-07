@@ -1,0 +1,24 @@
+package nuisance;
+
+public class NuisanceApp {
+
+	public static void main(String[] args) {
+		
+		//Creating friends
+		Friend friend1 = new Friend("Juan", 27, Hobby.MUSIC);
+		Friend friend2 = new Friend("Kate", 27, Hobby.SPORTS);
+		Friend friend3 = new Friend("Alex", 21, Hobby.MUSIC);
+		
+		//Adding friends to the array
+		Friend[] friends = {friend1, friend2, friend3};
+		
+		System.out.println(friends.length + " Friends:");
+		
+		for (Friend f : friends) {
+			for(int i = 1; i <= friends.length; i++) {
+			System.out.printf("friend%d: ", i);
+			System.out.println(f);
+		}
+	}
+
+}

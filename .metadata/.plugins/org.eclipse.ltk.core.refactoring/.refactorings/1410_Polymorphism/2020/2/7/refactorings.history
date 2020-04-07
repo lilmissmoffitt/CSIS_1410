@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 4 elements to &apos;1410_Polymorphism/src/labPolymorphism&apos;&#x0A;- Original project: &apos;1410_Polymorphism&apos;&#x0A;- Destination element: &apos;1410_Polymorphism/src/labPolymorphism&apos;&#x0A;- Original elements:&#x0A;     Dog.java&#x0A;     SledDog.java&#x0A;     CircusDog.java&#x0A;     DogApp.java&#x0A;- Update references to refactored element" description="Move compilation units" destination="/src&lt;labPolymorphism" element1="/src&lt;{Dog.java" element2="/src&lt;{SledDog.java" element3="/src&lt;{CircusDog.java" element4="/src&lt;{DogApp.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1581207044906" units="4" version="1.0"/>
+</session>

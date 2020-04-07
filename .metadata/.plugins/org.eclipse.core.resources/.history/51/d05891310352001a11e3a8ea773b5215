@@ -1,0 +1,10 @@
+package nuisance;
+
+public class Telemarketer extends Person implements Nuisance {
+
+	public Telemarketer(String name, int age) {
+		super(name, age);
+	}
+	
+
+}

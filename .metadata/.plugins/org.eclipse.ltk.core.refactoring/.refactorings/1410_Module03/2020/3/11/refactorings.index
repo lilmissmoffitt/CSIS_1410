@@ -1,0 +1,3 @@
+1584144633646	Extract method 'createMainPanel'
+1584145167594	Extract method 'createFaceLabel'
+1584145604690	Extract method 'createBtnLook'

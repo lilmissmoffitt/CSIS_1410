@@ -1,0 +1,35 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import collections.GenericCollections;
+import labJUnit.SimpleClass;
+
+class GenericCollectionsTest {
+
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+	}
+
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
+	}
+
+	@Test
+	void removeEveryNthElement_ThrowsIllegalArgumentException_If0() {
+		assertThrows(IllegalArgumentException.class, () -> GenericCollections.removeEveryNthElement(null, 0),"n must be a positive number");
+	}
+	
+	@Test
+	void removeEveryNthElement_ThrowsIllegalArgumentException_IfNegative() {
+		assertThrows(IllegalArgumentException.class, () -> GenericCollections.removeEveryNthElement(null, -5),"n must be a positive number");
+	}
+	
+	@Test
+	void removeEveryNthElement_ThrowsNullPointerException() {
+		assertThrows(NullPointerException.class, () -> GenericCollections.removeEveryNthElement(null, 3),"n must be a positive number");
+	}
+
+}

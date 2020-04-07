@@ -1,0 +1,25 @@
+package collections;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CollectionsDemo {
+
+	public static void main(String[] args) {
+		List<Double> numbers = new ArrayList<>();
+		
+		// Add two digit numbers multiples of 7
+		for(double n = 14; n <= 99; n+=7 ) {
+			numbers.add(n);
+		}
+		
+		System.out.println("numbers: " + numbers);
+		
+		//print fancy _14.0 _21.0_ _28.0_
+		System.out.print("numbers: ");
+		numbers.forEach(el -> System.out.print("_" + el + "_ "));
+		System.out.println();
+
+	}
+
+}

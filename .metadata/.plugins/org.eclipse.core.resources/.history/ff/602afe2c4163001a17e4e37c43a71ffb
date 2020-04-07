@@ -1,0 +1,32 @@
+package guiChangingImages;
+
+import java.awt.Graphics;
+
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+
+public class ImagePanel extends JPanel {
+	
+	private ImageIcon[] houses = {
+			new ImageIcon(ImagePanel.class.getResource("/guiChangingImages/Images/house1.png")),
+			new ImageIcon(ImagePanel.class.getResource("/guiChangingImages/Images/house2.png")),
+			new ImageIcon(ImagePanel.class.getResource("/guiChangingImages/Images/house3.png"))
+	};
+
+	/**
+	 * Create the panel.
+	 */
+	public ImagePanel() {
+
+	}
+	
+	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		
+		ImageIcon icon = new ImageIcon(ImagePanel.class.getResource("/guiChangingImages/Images/house1.png"));
+		
+		icon.paintIcon(this, g, 50, 50);
+	}
+
+}

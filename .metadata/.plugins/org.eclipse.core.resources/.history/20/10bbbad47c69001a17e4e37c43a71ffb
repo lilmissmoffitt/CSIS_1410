@@ -1,0 +1,25 @@
+package wrapperClass;
+
+/**
+ * 
+ * @author melissamoffitt
+ *
+ */
+public class DemoWrapperClass {
+	
+	public static void main(String[] args) {
+		minMax();
+	}
+	
+	/**
+	 * 
+	 * @return 
+	 * @return
+	 */
+	public static void minMax() {
+		System.out.printf("Byte%4f: [%d , %d] ", Byte.MIN_VALUE, Byte.MAX_VALUE);
+	}
+	
+	public static 
+
+}

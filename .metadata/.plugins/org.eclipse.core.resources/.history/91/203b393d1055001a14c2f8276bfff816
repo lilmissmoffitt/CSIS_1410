@@ -1,0 +1,17 @@
+package m02;
+
+/**
+ * 
+ * @author melissamoffitt
+ *
+ */
+public class Cave extends Domicile{
+	
+	private boolean cavePainting;
+	
+	public Cave(int numberOfRooms, boolean cavePainting) {
+		super(numberOfRooms);
+		this.cavePainting = cavePainting;
+	}
+
+}

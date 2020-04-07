@@ -1,0 +1,21 @@
+package m02;
+
+/**
+ * 
+ * @author melissamoffitt
+ *
+ */
+public class House extends Domicile {
+	private String architect;
+	
+	public House(int numberOfRooms, String architect) {
+		super(numberOfRooms);
+		this.architect = architect;
+	}
+	
+	public String getArchitect(){
+		return architect;
+	}
+	
+	
+}

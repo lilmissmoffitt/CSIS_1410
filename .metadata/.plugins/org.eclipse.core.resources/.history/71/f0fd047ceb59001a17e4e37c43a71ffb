@@ -1,0 +1,81 @@
+package guiDice;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class LabGuiDice extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					LabGuiDice frame = new LabGuiDice();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public LabGuiDice() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
+		JButton btnRoll = rolling();
+		contentPane.add(btnRoll, BorderLayout.SOUTH);
+		
+		JLabel lblDice = dice();
+		contentPane.add(lblDice, BorderLayout.CENTER);
+	}
+
+	private JLabel dice() {
+		JLabel lblDice = new JLabel("");
+		lblDice.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDice.setIcon(new ImageIcon(LabGuiDice.class.getResource("/guiDice/image/die-1.png")));
+		return lblDice;
+	}
+
+	private JButton rolling() {
+		JButton btnRoll = new JButton("Roll 'Em");
+		btnRoll.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lblDice.setIcon(new ImageIcon(LabGuiDice.class.getResource("/guiDice/image/die-2.png")));
+				
+			}
+		});
+		btnRoll.setVerticalAlignment(SwingConstants.BOTTOM);
+		btnRoll.setFont(new Font("Rockwell", Font.PLAIN, 20));
+		btnRoll.setForeground(new Color(255, 192, 203));
+		btnRoll.setOpaque(true);
+		btnRoll.setBackground(new Color(0, 0, 0));
+		btnRoll.setBorderPainted(false);
+		btnRoll.setBorder(new EmptyBorder(15, 5, 5, 5));
+		return btnRoll;
+	}
+
+}

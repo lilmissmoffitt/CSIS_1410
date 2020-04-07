@@ -1,0 +1,5 @@
+package forPawsScheduler;
+
+public enum Day {
+
+}

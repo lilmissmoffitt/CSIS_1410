@@ -1,0 +1,59 @@
+package ForPawsScheduler;
+
+public class Client extends User {
+
+	private String strAddress;
+	private String city;
+	private String state;
+	private int zip;
+	/**
+	 * @return the strAddress
+	 */
+	public String getStrAddress() {
+		return strAddress;
+	}
+	/**
+	 * @param strAddress the strAddress to set
+	 */
+	public void setStrAddress(String strAddress) {
+		this.strAddress = strAddress;
+	}
+	/**
+	 * @return the city
+	 */
+	public String getCity() {
+		return city;
+	}
+	/**
+	 * @param city the city to set
+	 */
+	public void setCity(String city) {
+		this.city = city;
+	}
+	/**
+	 * @return the state
+	 */
+	public String getState() {
+		return state;
+	}
+	/**
+	 * @param state the state to set
+	 */
+	public void setState(String state) {
+		this.state = state;
+	}
+	/**
+	 * @return the zip
+	 */
+	public int getZip() {
+		return zip;
+	}
+	/**
+	 * @param zip the zip to set
+	 */
+	public void setZip(int zip) {
+		this.zip = zip;
+	}
+	
+	
+}

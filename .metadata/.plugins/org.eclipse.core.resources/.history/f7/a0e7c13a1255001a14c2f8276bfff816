@@ -1,0 +1,10 @@
+package m02;
+
+public class Module02 {
+
+	public static void main(String[] args) {
+		House h = new House(3, "Gerhy");
+
+	}
+
+}

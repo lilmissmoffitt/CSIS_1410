@@ -1,0 +1,4 @@
+module labs {
+	exports helloWorld;
+	requires org.junit.jupiter.api;
+}

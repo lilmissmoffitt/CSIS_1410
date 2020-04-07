@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="GenericCollectionsTest" project="1410_GenericCollections" tests="3" started="0" failures="0" errors="1" ignored="0">
+  <testsuite name="GenericCollectionsTest" incomplete="true" uniqueid="[engine:junit-jupiter]/[class:GenericCollectionsTest]">
+    <error>org.junit.platform.commons.JUnitException: @BeforeEach method 'static void GenericCollectionsTest.setUpBeforeClass() throws java.lang.Exception' must not be static.
+	at org.junit.jupiter.engine.descriptor.LifecycleMethodUtils.assertNonStatic(LifecycleMethodUtils.java:65)
+	at org.junit.jupiter.engine.descriptor.LifecycleMethodUtils.lambda$findMethodsAndAssertNonStatic$1(LifecycleMethodUtils.java:89)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1080)
+	at org.junit.jupiter.engine.descriptor.LifecycleMethodUtils.findMethodsAndAssertNonStatic(LifecycleMethodUtils.java:89)
+	at org.junit.jupiter.engine.descriptor.LifecycleMethodUtils.findBeforeEachMethods(LifecycleMethodUtils.java:48)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.registerBeforeEachMethodAdapters(ClassBasedTestDescriptor.java:425)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.prepare(ClassBasedTestDescriptor.java:154)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.prepare(ClassBasedTestDescriptor.java:77)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:137)
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+
+</error>
+    <testcase name="lettersAndNumbers_IsListEmpty" classname="GenericCollectionsTest" incomplete="true" displayname="lettersAndNumbers_IsListEmpty()" uniqueid="[engine:junit-jupiter]/[class:GenericCollectionsTest]/[method:lettersAndNumbers_IsListEmpty()]"/>
+    <testcase name="lettersAndNumbers_IsListNull" classname="GenericCollectionsTest" incomplete="true" displayname="lettersAndNumbers_IsListNull()" uniqueid="[engine:junit-jupiter]/[class:GenericCollectionsTest]/[method:lettersAndNumbers_IsListNull()]"/>
+    <testcase name="lettersAndNumbers_NumbersAreFormatted" classname="GenericCollectionsTest" incomplete="true" displayname="lettersAndNumbers_NumbersAreFormatted()" uniqueid="[engine:junit-jupiter]/[class:GenericCollectionsTest]/[method:lettersAndNumbers_NumbersAreFormatted()]"/>
+  </testsuite>
+</testrun>

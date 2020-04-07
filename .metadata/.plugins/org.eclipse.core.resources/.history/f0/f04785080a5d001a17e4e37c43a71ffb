@@ -1,0 +1,96 @@
+package guiLayout;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Dimension;
+import java.awt.Color;
+
+public class LabGuiLayout extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					LabGuiLayout frame = new LabGuiLayout();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public LabGuiLayout() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 200);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(new BorderLayout());
+		
+		JLabel lblTitle = title();
+		contentPane.add(lblTitle, BorderLayout.NORTH);
+		
+		JPanel mainPanel = mainPanel();
+		mainPanel.setLayout(new GridLayout(0, 4, 0, 0));
+	
+		JPanel controlPanel = controlPanel();
+		controlPanel.setLayout(new GridLayout(0, 2, 0, 0));
+	}
+
+	private JPanel mainPanel() {
+		JPanel mainPanel = new JPanel();
+		contentPane.add(mainPanel, BorderLayout.CENTER);
+		{
+			JLabel lblBox1 = new JLabel("1");
+			mainPanel.add(lblBox1);
+		}
+		{
+			JLabel lblBox2 = new JLabel("2");
+			mainPanel.add(lblBox2);
+		}
+		{
+			JLabel lblBox3 = new JLabel("3");
+			mainPanel.add(lblBox3);
+		}
+		{
+			JLabel lblBox4 = new JLabel("4");
+			mainPanel.add(lblBox4);
+		}
+		return mainPanel;
+	}
+
+	private JPanel controlPanel() {
+		JPanel controlPanel = new JPanel();
+		contentPane.add(controlPanel, BorderLayout.WEST);
+		return controlPanel;
+	}
+
+	private JLabel title() {
+		JLabel lblTitle = new JLabel("Demo Layout");
+		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTitle.setBorder(new EmptyBorder(5, 5, 5, 5));
+		return lblTitle;
+	}
+
+
+}

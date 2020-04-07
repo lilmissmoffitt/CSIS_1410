@@ -1,0 +1,31 @@
+package m02;
+
+/**
+ * 
+ * @author melissamoffitt
+ *
+ */
+public class House extends Domicile {
+	private String architect;
+
+	public House(int numberOfRooms, String architect) {
+		super(numberOfRooms);
+		this.architect = architect;
+	}
+
+	public String getArchitect() {
+		return architect;
+	}
+
+	@Override
+	public void heat() {
+		System.out.println("running the heater");
+	}
+
+	// remove code duplication by possibly calling other toString then
+	// adding the architect?
+	@Override
+	public String toString() {
+		return this.getClass().getSimpleName() + " with " + getNumberOfRooms() + " rooms by " + getArchitect();
+	}
+}

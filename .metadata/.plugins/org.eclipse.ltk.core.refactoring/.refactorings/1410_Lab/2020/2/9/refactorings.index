@@ -1,0 +1,15 @@
+1582687689684	Extract method 'newLblTitle'
+1582687821706	Extract method 'createButton'
+1582687950733	Extract method 'newTextPanel'
+1582688211968	Extract method 'createRedLabel'
+1582690642735	Extract method 'createButton'
+1582746408447	Extract method 'txtField'
+1582779493815	Delete element
+1582779600883	Extract method 'newLblTitle'
+1582779730211	Extract method 'createWestButton'
+1582779882276	Extract method 'newTextPanel'
+1582780382107	Extract method 'createRedLabel'
+1582866706820	Extract method 'rolling'
+1582867668273	Extract method 'dice'
+1582936669904	Extract method 'rollingDice'
+1582938537786	Delete element

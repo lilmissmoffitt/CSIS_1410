@@ -1,0 +1,83 @@
+package guiLayout;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+
+public class LabGuiLayout extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					LabGuiLayout frame = new LabGuiLayout();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public LabGuiLayout() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(new BorderLayout());
+		
+		JLabel lblTitle = title();
+		contentPane.add(lblTitle);
+		
+		JPanel controlPanel = controlPanel();
+		contentPane.add(controlPanel);
+	}
+
+	private JPanel controlPanel() {
+		JPanel controlPanel = new JPanel();
+		controlPanel.setLayout(new GridLayout(1, 0, 0, 0));
+		{
+			JButton btnNewButton_3 = new JButton("1");
+			controlPanel.add(btnNewButton_3);
+		}
+		{
+			JButton btnNewButton_1 = new JButton("2");
+			controlPanel.add(btnNewButton_1);
+		}
+		{
+			JButton btnNewButton = new JButton("3");
+			controlPanel.add(btnNewButton);
+		}
+		{
+			JButton btnNewButton_2 = new JButton("4");
+			controlPanel.add(btnNewButton_2);
+		}
+		return controlPanel;
+	}
+
+	private JLabel title() {
+		JLabel lblTitle = new JLabel("Demo Layout");
+		lblTitle.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTitle.setBorder(new EmptyBorder(5, 5, 5, 5));
+		return lblTitle;
+	}
+
+}

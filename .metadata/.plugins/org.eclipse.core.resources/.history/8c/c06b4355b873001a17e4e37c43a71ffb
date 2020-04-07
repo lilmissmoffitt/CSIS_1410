@@ -1,0 +1,28 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+class GenericCollectionsTest {
+	
+	public static List<Character> list = new ArrayList<>();
+	public static List<String> strList = new ArrayList<>();
+
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+		
+	}
+
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
+		list.clear();
+		strList.clear();
+	}
+
+
+
+}

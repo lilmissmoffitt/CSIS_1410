@@ -1,0 +1,25 @@
+package guiImagePanel.Images;
+
+import java.awt.Graphics;
+
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+
+@SuppressWarnings("serial")
+public class PicturePanel extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public PicturePanel() {
+
+	}
+	
+	@Override
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		ImageIcon icon = new ImageIcon(PicturePanel.class.getResource("/guiImagePanel/Images/house1.png"));
+		icon.paintIcon(this, g, 50, 50);
+	}
+
+}
