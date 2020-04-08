@@ -1,19 +1,28 @@
 package keyValue;
 
-public class KeyValuePair<K extends Comparable<K>,V>
-	implements Comparable<KeyValuePair<K,V>>{
-	
+/**
+ * Creates a generic class that allows you to associate a key with a value. It
+ * also contains the compareTo() method to help sort, the equals() method, and a
+ * toString() method to format the output.
+ * 
+ * @author melissamoffitt
+ *
+ * @param <K>
+ * @param <V>
+ */
+public class KeyValuePair<K extends Comparable<K>, V> implements Comparable<KeyValuePair<K, V>> {
+
 	private K key;
 	private V value;
-	
+
 	public KeyValuePair(K key, V value) {
 		this.key = key;
 		this.value = value;
 	}
-	
-	@Override
-	public int compareTo(KeyValuePair<K,V> o) {
+
+	public int compareTo(KeyValuePair<K, V> o) {
 		int compare = this.key.compareTo(o.key);
+
 		return compare;
 	}
 
@@ -48,7 +57,7 @@ public class KeyValuePair<K extends Comparable<K>,V>
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		KeyValuePair other = (KeyValuePair) obj;
+		KeyValuePair<?, ?> other = (KeyValuePair<?, ?>) obj;
 		if (key == null) {
 			if (other.key != null)
 				return false;
@@ -66,8 +75,5 @@ public class KeyValuePair<K extends Comparable<K>,V>
 	public String toString() {
 		return "(" + key + ", " + value + ")";
 	}
-	
-	
-	
-	
+
 }
