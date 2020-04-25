@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="GenericCollectionsTest" project="1410_GenericCollections" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="GenericCollectionsTest" time="0.08" uniqueid="[engine:junit-jupiter]/[class:GenericCollectionsTest]">
-    <testcase name="lettersAndNumbers_IsListEmpty" classname="GenericCollectionsTest" time="0.05" displayname="lettersAndNumbers_IsListEmpty()" uniqueid="[engine:junit-jupiter]/[class:GenericCollectionsTest]/[method:lettersAndNumbers_IsListEmpty()]"/>
-    <testcase name="lettersAndNumbers_NumbersAreFormatted" classname="GenericCollectionsTest" time="0.03" displayname="lettersAndNumbers_NumbersAreFormatted()" uniqueid="[engine:junit-jupiter]/[class:GenericCollectionsTest]/[method:lettersAndNumbers_NumbersAreFormatted()]"/>
-  </testsuite>
-</testrun>

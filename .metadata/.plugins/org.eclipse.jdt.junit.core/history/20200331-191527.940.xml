@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="GenericCollectionsTest" project="1410_GenericCollections" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="GenericCollectionsTest" time="0.106" uniqueid="[engine:junit-jupiter]/[class:GenericCollectionsTest]">
-    <testcase name="lettersAndNumbers_IsListEmpty" classname="GenericCollectionsTest" time="0.106" displayname="lettersAndNumbers_IsListEmpty()" uniqueid="[engine:junit-jupiter]/[class:GenericCollectionsTest]/[method:lettersAndNumbers_IsListEmpty()]"/>
-  </testsuite>
-</testrun>

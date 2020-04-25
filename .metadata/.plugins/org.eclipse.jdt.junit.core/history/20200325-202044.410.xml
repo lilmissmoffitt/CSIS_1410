@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="DemoWrapperClassTest.testGetRandomLetter" project="1410_LABS" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="wrapperClass.DemoWrapperClassTest" time="0.072" displayname="DemoWrapperClassTest" uniqueid="[engine:junit-jupiter]/[class:wrapperClass.DemoWrapperClassTest]">
-    <testcase name="testGetRandomLetter" classname="wrapperClass.DemoWrapperClassTest" time="0.072" displayname="testGetRandomLetter()" uniqueid="[engine:junit-jupiter]/[class:wrapperClass.DemoWrapperClassTest]/[method:testGetRandomLetter()]"/>
-  </testsuite>
-</testrun>

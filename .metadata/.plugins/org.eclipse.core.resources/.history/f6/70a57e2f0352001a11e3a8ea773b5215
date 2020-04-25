@@ -1,6 +1,0 @@
-package nuisance;
-
-public interface Nuisance {
-	//Possibly String?
-	void annoy();
-}
